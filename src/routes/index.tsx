@@ -21,7 +21,7 @@ function Home() {
       <div className="max-w-6xl mx-auto space-y-6 sm:space-y-8">
         <div className="text-center">
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
-            Salary Comparison Tool
+            Paychart
           </h1>
           <p className="text-gray-600 text-sm sm:text-base">
             Comparez votre salaire entre 15 pays européens
@@ -51,8 +51,8 @@ function Home() {
 
         <footer className="text-center text-sm text-gray-500 pt-8 border-t border-gray-200">
           <p>
-            Développé avec TanStack Start • Open source sur{' '}
-            <a href="https://github.com/idasrah" className="text-blue-600 hover:underline">
+            Paychart • Développé avec TanStack Start •{' '}
+            <a href="https://github.com/ton-username/paychart" className="text-blue-600 hover:underline">
               GitHub
             </a>
           </p>
