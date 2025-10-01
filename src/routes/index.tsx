@@ -21,7 +21,7 @@ function Home() {
       <div className="max-w-6xl mx-auto space-y-6 sm:space-y-8">
         <div className="text-center">
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
-            💶 Salary Comparison Tool
+            Salary Comparison Tool
           </h1>
           <p className="text-gray-600 text-sm sm:text-base">
             Comparez votre salaire entre 15 pays européens
