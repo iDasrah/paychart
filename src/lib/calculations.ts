@@ -1,12 +1,14 @@
+import { countries } from './countries'
 import type { Country, SalaryResult } from './types'
-import { countries} from '@/lib/countries.ts'
+
+const REFERENCE_INDEX = 58.0; // France comme référence
 
 export function calculateSalaryForCountry(grossSalary: number, country: Country): SalaryResult {
   const socialContributionsPaid = grossSalary * country.socialContributionsRate;
   const taxableIncome = grossSalary - socialContributionsPaid;
   const incomeTaxPaid = taxableIncome * country.incomeTaxRate;
   const netSalary = taxableIncome - incomeTaxPaid;
-  const purchasingPower = netSalary * (100 / country.costOfLivingIndex);
+  const purchasingPower = netSalary * (REFERENCE_INDEX / country.costOfLivingIndex);
 
   return {
     country: country.name,
