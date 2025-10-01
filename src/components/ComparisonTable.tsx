@@ -1,12 +1,16 @@
 import type { SalaryResult } from '@/lib/types'
 import { formatCurrency } from '@/utils/formatters'
 
+function getBestCountry(results: Array<SalaryResult>): string {
+  return [...results].sort((a, b) => b.purchasingPower - a.purchasingPower)[0].country;
+}
+
 type ComparisonTableProps = {
   results: Array<SalaryResult>;
 }
 
 export function ComparisonTable({ results }: ComparisonTableProps) {
-  const bestPurchasingPower = Math.max(...results.map(r => r.purchasingPower));
+  const bestCountry = getBestCountry(results);
 
   return (
     <div className="w-full overflow-x-auto">
@@ -32,7 +36,7 @@ export function ComparisonTable({ results }: ComparisonTableProps) {
         </thead>
         <tbody className="divide-y divide-gray-200">
         {results.map((result) => {
-          const isBest = result.purchasingPower === bestPurchasingPower;
+          const isBest = result.country === bestCountry;
 
           return (
             <tr
@@ -41,6 +45,11 @@ export function ComparisonTable({ results }: ComparisonTableProps) {
             >
               <th scope="row" className="px-6 py-4 text-left font-medium text-gray-900">
                 {result.country}
+                {isBest && (
+                  <span className="ml-2 inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                    🏆 Meilleur
+                  </span>
+                )}
               </th>
               <td className="px-6 py-4 text-right text-gray-700">
                 {formatCurrency(result.netSalary)}
