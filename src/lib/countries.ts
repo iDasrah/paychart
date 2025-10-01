@@ -1,4 +1,4 @@
-import type { Country } from './types';
+import type { Country, SalaryResult } from './types'
 
 /**
  * Données des pays européens pour comparaison salariale
@@ -122,3 +122,7 @@ export const countries: Array<Country> = [
     costOfLivingIndex: 59.8,
   },
 ];
+
+export function sortResults(results: Array<SalaryResult>): Array<SalaryResult> {
+  return results.sort((a, b) => b.purchasingPower - a.purchasingPower)
+}

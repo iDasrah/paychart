@@ -1,5 +1,6 @@
 import type { SalaryResult } from '@/lib/types'
 import { formatCurrency } from '@/utils/formatters'
+import { sortResults } from '@/lib/countries.ts'
 
 function getBestCountry(results: Array<SalaryResult>): string {
   return [...results].sort((a, b) => b.purchasingPower - a.purchasingPower)[0].country;
@@ -11,6 +12,7 @@ type ComparisonTableProps = {
 
 export function ComparisonTable({ results }: ComparisonTableProps) {
   const bestCountry = getBestCountry(results);
+  const sortedResults = sortResults(results);
 
   return (
     <div className="w-full overflow-x-auto">
@@ -35,7 +37,7 @@ export function ComparisonTable({ results }: ComparisonTableProps) {
         </tr>
         </thead>
         <tbody className="divide-y divide-gray-200">
-        {results.map((result) => {
+        {sortedResults.map((result) => {
           const isBest = result.country === bestCountry;
 
           return (

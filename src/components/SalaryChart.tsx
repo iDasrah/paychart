@@ -1,13 +1,15 @@
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import type { SalaryResult } from '@/lib/types';
 import { formatCurrency } from '@/utils/formatters';
+import { sortResults } from '@/lib/countries.ts'
 
 type SalaryChartProps = {
   results: Array<SalaryResult>;
 }
 
 export function SalaryChart({ results }: SalaryChartProps) {
-  const chartData = results.map(r => ({
+  const sortedResults = sortResults(results);
+  const chartData = sortedResults.map(r => ({
     country: r.country,
     purchasingPower: Math.round(r.purchasingPower),
   }));
