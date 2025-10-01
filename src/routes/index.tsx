@@ -52,7 +52,7 @@ function Home() {
         <footer className="text-center text-sm text-gray-500 pt-8 border-t border-gray-200">
           <p>
             Paychart • Développé avec TanStack Start •{' '}
-            <a href="https://github.com/ton-username/paychart" className="text-blue-600 hover:underline">
+            <a href="https://github.com/idasrah/paychart" className="text-blue-600 hover:underline">
               GitHub
             </a>
           </p>
