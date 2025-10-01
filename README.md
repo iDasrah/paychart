@@ -31,6 +31,7 @@ npm run dev
 ```
 
 Ouvrir [http://localhost:3000](http://localhost:3000)
+ou [https://paychart.netlify.app](https://paychart.netlify.app)
 
 ## Pays inclus
 
