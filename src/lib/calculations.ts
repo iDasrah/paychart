@@ -6,7 +6,6 @@ export function calculateSalaryForCountry(grossSalary: number, country: Country)
   const taxableIncome = grossSalary - socialContributionsPaid;
   const incomeTaxPaid = taxableIncome * country.incomeTaxRate;
   const netSalary = taxableIncome - incomeTaxPaid;
-  const purchasingPower = netSalary * (country.costOfLivingIndex / 100);
 
   return {
     country: country.name,
@@ -14,7 +13,6 @@ export function calculateSalaryForCountry(grossSalary: number, country: Country)
     netSalary,
     incomeTaxPaid,
     socialContributionsPaid,
-    purchasingPower,
   }
 }
 

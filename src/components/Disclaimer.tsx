@@ -13,7 +13,7 @@ export function Disclaimer() {
             Les systèmes fiscaux réels sont plus complexes avec des tranches progressives.
           </p>
           <p className="text-xs text-blue-600 mt-2">
-            Sources : OECD Taxing Wages 2025, Tax Foundation Europe, Numbeo Cost of Living Index 2025 •
+            Sources : OECD Taxing Wages 2025, Tax Foundation Europe •
             Dernière mise à jour : Octobre 2025
           </p>
         </div>

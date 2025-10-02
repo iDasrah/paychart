@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { SalaryInput } from '@/components/SalaryInput'
 import { ComparisonTable } from '@/components/ComparisonTable'
 import { SalaryChart } from '@/components/SalaryChart'
-import { KeyInsights } from '@/components/KeyInsights'
 import { Disclaimer } from '@/components/Disclaimer'
 import { calculateAllCountries } from '@/lib/calculations'
 
@@ -36,8 +35,6 @@ function Home() {
 
         {grossSalary > 0 && (
           <>
-            <KeyInsights results={results} />
-
             <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6">
               <h2 className="text-xl font-semibold text-gray-900 mb-4">
                 📊 Comparaison détaillée
