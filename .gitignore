@@ -11,3 +11,5 @@ count.txt
 .vinxi
 todos.json
 routeTree.gen.ts
+# Local Netlify folder
+.netlify

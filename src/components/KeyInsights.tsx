@@ -20,7 +20,7 @@ export function KeyInsights({ results }: KeyInsightsProps) {
       </h2>
 
       <div className="space-y-3">
-        <div className="flex items-start">
+        <div className="flex items-center">
           <span className="text-2xl mr-3">🏆</span>
           <div>
             <p className="text-gray-900">
@@ -30,7 +30,7 @@ export function KeyInsights({ results }: KeyInsightsProps) {
           </div>
         </div>
 
-        <div className="flex items-start">
+        <div className="flex items-center">
           <span className="text-2xl mr-3">📊</span>
           <div>
             <p className="text-gray-900">
@@ -40,7 +40,7 @@ export function KeyInsights({ results }: KeyInsightsProps) {
           </div>
         </div>
 
-        <div className="flex items-start">
+        <div className="flex items-center">
           <span className="text-2xl mr-3">💰</span>
           <div>
             <p className="text-gray-900">

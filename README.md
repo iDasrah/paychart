@@ -114,19 +114,19 @@ ou [https://paychart.netlify.app](https://paychart.netlify.app)
 
 ```typescript
 // 1. Cotisations sociales sur le brut
-cotisations = salaireBrut × tauxCotisations
+cotisations = salaireBrut * tauxCotisations
 
 // 2. Assiette imposable
 assiette = salaireBrut - cotisations
 
 // 3. Impôts sur l'assiette
-impôts = assiette × tauxImposition
+impôts = assiette * tauxImposition
 
 // 4. Salaire net
 net = assiette - impôts
 
-// 5. Pouvoir d'achat (normalisé base France = 58.0)
-pouvoirAchat = net × (58.0 / indexCoûtDeVie)
+// 5. Pouvoir d'achat
+pouvoirAchat = net * (indexCoûtDeVie / 100)
 ```
 
 ## Contribuer
